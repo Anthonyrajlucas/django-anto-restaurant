@@ -1,1 +1,1 @@
-web: gunicorn raj_restaurant.wsg
+web: gunicorn raj_restaurant.wsgi
