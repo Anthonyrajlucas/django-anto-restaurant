@@ -43,3 +43,33 @@ body {
     text-shadow: 2px 2px #0c0c0cfb;
     font-weight: 650;
 }
+
+.header-content h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+  
+.header-content p {
+    font-size: 18px;
+}
+
+/* Button styles */
+.btn-primary {
+    background-color: #f06292;
+    border: none;
+}
+  
+.btn-primary:hover {
+    background-color: #e64980;
+}
+  
+/* Main content styles */
+
+.main-content {
+    background-color: #fff;
+    padding: 40px;
+    margin-top: -40px;
+  }
+  
+ 
+  
