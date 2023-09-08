@@ -4,8 +4,9 @@ Contact App - URLS
 URLS Configuration for Contact App
 """
 from django.urls import path
-from . import views
+from .views import Contact
+
 
 urlpatterns = [
-    path("", views.Contact.as_view(), name="contact_us"),
+    path("",Contact.as_view(), name="contact_us"),
 ]
