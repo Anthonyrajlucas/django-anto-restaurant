@@ -23,7 +23,7 @@
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav  ms-auto">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
+                <a class="nav-link {% if url_name == 'home_page' %}active{% endif %}" aria-current="page" href="{% url 'home_page' %}">Home</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#">Menu</a>
@@ -34,41 +34,18 @@
               <li class="nav-item">
                 <a class="nav-link" href="#">Booking</a>
               </li>
-              <li class="nav-item flex a-center">
-                <i class="fas d-none d-lg-block"></i>
-                <a class="nav-link {%if url_name == 'contact' %}active{% endif %}" href="{% url 'contact' %"}">Contact Us</a>
+              <li class="nav-item flex a-center"> 
+                <a class="nav-link active" href="/contact">Contact Us</a>
               </li>
             </ul>
           </div>
         </div>
       </nav>
-      <!-- Header content -->
-      <div class="header-content">
-        <div class="container">
-          <h1>Welcome to Anto-Restaurant</h1>
-          <p>Unforgettable Dining, Memorable Moments, The magic of the orient in Darmstadt</p>
-          <a href="#" class="btn btn-primary">Book a Table</a>
-        </div>
-      </div>
     </header>
-    <main>
-      <!-- Main content -->
-      <div class="main-content">
-        <div class="container">
-          <!-- About us section -->
-          <section id="about-us" class="text-center">
-            <h2 class="welcome"><span>Welcome<i class="fas fa-globe" aria-hidden="true"></i></span></h2>
-            <div id="about-text">
-              <p>
-                Welcome to Anto-Restaurant. At Restaurant, we want nothing less than to enchant you. As our name suggests, you can experience with us in Darmstadt, with all your senses, what the magic of the Orient has to offer in terms of beauty. With lovingly prepared dishes and a sophisticated ambiance, we would like to enchant you. The Orient as an authentic experience and a special atmosphere awaits you in our restaurant in Darmstadt.
-              </p>
-            </div>
-            <div class="text-center">
-              <img src="{% static 'images/baner.jpg' %}" alt="Picture of the restaurant interior" class="img-fluid">
-            </div>
-          </section>
-        </div>
-      </div>
+    <main class="flex-shrink-0 main-bg">
+      {% block content %}
+      <!-- Content Goes here -->
+      {% endblock content %}
     </main>
     <footer class="footer mt-auto py-4 ">
         <p class="m-0 text-center" >© Anto-Restaurant 2000</p>
