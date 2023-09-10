@@ -55,6 +55,11 @@ INSTALLED_APPS = [
 
     'home_page',
     'contact_us',
+
+    #others
+ 
+    'crispy_forms',
+    'crispy_bootstrap5',
 ]
 
 SITE_ID = 1
@@ -70,12 +75,18 @@ MIDDLEWARE = [
     'allauth.account.middleware.AccountMiddleware',
 ]
 
+CRISPY_ALLOWED_TEMPLATE_PACKS = 'bootstrap5'
+CRISPY_TEMPLATE_PACK = 'bootstrap5'
+
 ROOT_URLCONF = 'raj_restaurant.urls'
 
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [TEMPLATES_DIR],
+        'DIRS': [ TEMPLATES_DIR,
+              os.path.join(BASE_DIR, 'templates', 'account')
+                    
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -84,6 +95,11 @@ TEMPLATES = [
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
             ],
+            'builtins' : [
+                  'crispy_forms.templatetags.crispy_forms_tags',
+                  'crispy_forms.templatetags.crispy_forms_field'
+    ]
+
         },
     },
 ]
