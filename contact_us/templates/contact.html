@@ -1,12 +1,44 @@
-
-{% extends "base.html" %} 
-{% load static %} 
+{% extends "base.html" %}
+{% load static %}
 {% block content %}
-<div>
-    <div class="center-container  min-h-100 review-page">
-        <div class="center-container p-4">
-            <div class="contact">
-                <h3>This is Contact page</h3><br>
+<div class="container timetable">
+    <div class="page-title">
+        <h1>Contact Us</h1>
+        <p>Welcome to Anto-Restaurant. We're here to assist you.</p>
+    </div>
+    <div class="row">
+        <div class="col-md-6 contact-section">
+            <div class="contact-info">
+                <h4>Address</h4>
+                <p>Vilbeler Str. 2, 64283, Darmstadt, Germany</p>
+                <h4>Phone</h4>
+                <p><a href="tel:+49152113875014"><i class="fas fa-phone"></i> +49 152 1138 75014</a></p>
+                <h4>Email</h4>
+                <p><a href="mailto:anto-restaurant@de-hotels.com"><i class="fas fa-envelope"></i>
+                        anto-restaurant@de-hotels.com</a></p>
+                <h4>Services</h4>
+                <ul class="services-list">
+                    <li><i class="fas fa-wifi"></i> Free Wi-Fi</li>
+                    <li><i class="fas fa-parking"></i> Parking</li>
+                    <li><i class="fas fa-solar-panel"></i> Eco-friendly</li>
+                    <li><i class="far fa-handshake"></i> Meetings</li>
+                    <li><i class="fas fa-birthday-cake"></i> Celebrations</li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-6 contact-section">
+            <div class="opening-hours">
+                <h4>Opening Hours</h4>
+                <p>Mon., Tue., Wed. & Thurs.: 11:30 a.m. - 11:00 p.m.</p>
+                <p>Fri & Sat: 11:30 a.m. - 12:00 a.m.</p>
+                <p>Sun: 12:00 a.m - 12:00 a.m.</p>
+                <p>Holidays: 12:00 p.m. - 11:00 p.m.</p>
+            </div>
+            <div class="directions">
+                <h4>Directions</h4>
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d20567.444445036024!2d8.635382589009064!3d49.881330682520336!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sde!4v1694340144388!5m2!1sen!2sde"
+                    allowfullscreen></iframe>
             </div>
         </div>
     </div>
