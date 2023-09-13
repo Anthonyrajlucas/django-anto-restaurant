@@ -55,6 +55,7 @@ INSTALLED_APPS = [
 
     'home_page',
     'contact_us',
+    'menu_app',
 
     #others
  
