@@ -1,5 +1,5 @@
 from django import forms
-from menu_app import MenuItem
+from .models import MenuItem
 
 class MenuItemForm(forms.ModelForm):
    class Meta:
