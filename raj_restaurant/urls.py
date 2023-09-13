@@ -28,4 +28,5 @@ urlpatterns = [
     path('account/login/', login, name='account_login'), 
     path('account/logout/', logout, name='account_logout'),
     path('', include('menu_app.urls')),
+   
 ]
